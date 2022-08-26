@@ -9,8 +9,8 @@ device = pt.device("cuda" if pt.cuda.is_available() else "cpu")
 class RNN(nn.Module):
     def __init__(self, input_size, hidden_size, num_layers, num_classes, dev):
         super(RNN, self).__init__()
-        self.hidden2 = 64
-        self.hidden3 = 64
+        self.hidden2 = 32
+        self.hidden3 = 32
         self.hidden_size = hidden_size
         self.num_layers = num_layers
         self.input_size = input_size
