@@ -1,0 +1,433 @@
+Earlyendosome membrane
+Cell projection, stereocilium
+Golgiapparatus, trans-Golgi network membrane
+Cytoplasmic vesicle membrane
+Localized to the interphase centrosome and mitotic spindle poles
+Note=Predominantly cytoplasmic,shuttles between the nucleus and the cytoplasm
+Nucleus inner membrane
+Cytoplasmicvesicle, secretory vesicle, synaptic vesicle membrane
+Mitochondrion matrix, mitochondrion nucleoid
+Postsynaptic cell membrane
+Note=Localized to storagegranules
+Single-pass type IVmembrane protein
+Virionmembrane
+Cytoplasm
+Cell projection, microvillus
+Note=Colocalizes with PCNA within the replication foci in S-phasecells
+Zona pellucida
+Note=NANOS2 promotes its localization to P-body
+Golgi apparatus,Golgi stack
+Note=Anchored tothe mitochondrial inner membrane through its interaction with theintegral membrane beta chain
+Cytoplasm, cytoskeleton, spindle
+Midbody
+Cytoplasm, myofibril, sarcomere, A band
+Cellprojection, dendritic spine membrane
+Chromosome, centromere
+Cytoplasmic vesicle, COPII-coated vesiclemembrane
+Cytoplasm, Cytoplasmicribonucleoprotein granule
+Virion tegument
+Midbody, Midbody ring
+Note=Associated with mitochondria ofthe midpiece and near the plasma membrane in the principal piece of theflagellum
+Lysosomelumen
+Cell projection, cilium, photoreceptor outersegment
+Vesicle
+Membrane
+Cytoplasmic side
+Cell projection, phagocytic cup
+Golgiapparatus
+Cell junction,gap junction
+Cellprojection, ruffle
+Cellprojection, lamellipodium
+Golgi apparatus, cis-Golgi network membrane
+Cytoplasmicvesicle
+Note=Localizes to the matrix side ofthe mitochondrion inner membrane
+Single-pass membrane protein
+Cytoplasmic vesicle, secretoryvesicle, acrosome
+Cell projection, cilium
+Localizes to endoplasmic reticulum tubularnetwork
+Mitochondrioninner membrane
+Celljunction, gap junction
+Golgi apparatus membrane
+Cytoplasm,cytoskeleton, microtubule organizing center, centrosome
+Nucleus,nucleoplasm
+Chromosome, centromere, kinetochore
+Cytoplasm, cytoskeleton, microtubule organizing center, centrosome,centriole
+Cytoplasmic granule membrane
+Cytoplasm, cytoskeleton, spindle pole
+Zymogen granule membrane
+In passaging cells,translocated to the cell periphery
+Lumenal side
+Single-pass type IV membrane protein
+Cytoplasm, cytoskeleton, microtubule organizingcenter, centrosome, centriolar satellite
+Synapse
+Mitochondrion innermembrane
+Cytoplasm,myofibril, sarcomere
+Microsome membrane
+Enhanced recruitment to the mitotic spindle poles requires microtubulesand interaction with KATNB1
+Presynaptic active zone
+Cytoplasm, cytoskeleton, flagellum axoneme
+Chromosome
+Translocated to the cytoplasm vianuclear pores in a CRM1/RAN-dependent manner involving oxidativestress-mediated phosphorylation at Tyr
+Cytoplasmic vesicle, clathrin-coated vesicle
+Plastid, chloroplast stroma
+Cytoplasm,cytoskeleton, spindle
+Cytoplasmic vesicle, secretory vesiclemembrane
+Presynaptic cell membrane
+Endosome, multivesicular body lumen
+Localizes within the cytoplasm, partiallyoverlapping with microtubules, in interphase and to the mitotic spindleand spindle poles during mitosis
+Redistributes to axons during neuronal development
+Cytoplasmic vesicle, phagosome
+During metaphase is localized throughout the cell and morewidely dispersed than the microtubules
+Note=Shuttles between thenucleus and the cytoplasm
+Single-pass type III membraneprotein
+Enhanced recruitment to themitotic spindle poles requires microtubules and interaction withKATNB1
+Single-passtype I membrane protein
+Cell projection, stereocilium membrane
+Cytoplasm, cytoskeleton, stress fiber
+Note=Shuttling between nuclear andcytoplasm depends on cell cycle, phosphorylation states, transformationand DNA damage
+Note=Present in the cytoplasmunder non-stressed conditions and ER stress leads to its nuclearaccumulation
+Golgi apparatus, cis-Golgi network
+Apicalcell membrane
+Cell projection, ruffle
+Cytoplasm, cytoskeleton, microtubule organizing center,centrosome
+Cytoplasmic vesicle, clathrin-coated vesicle membrane
+Cytoplasm, myofibril, sarcomere, Z line
+Cytoplasmic vesicle, clathrin-coatedvesicle
+Nucleus lamina
+Rough endoplasmic reticulum
+Melanosome membrane
+Cytoplasm, perinuclear region
+Cell projection, lamellipodium membrane
+Photoreceptor inner segment
+Cell junction, tight junction
+Cell projection, cilium, flagellum
+Extracellular side
+Note=Cytoplasmic face of coated pitsand vesicles
+Cell projection, dendritic spine membrane
+Note=Localizes to the plus end ofmicrotubules and to the centrosome
+CC   -!- SUBCELLULAR LOCATION: [Tumor necrosis factor, membrane form]: Membrane
+Cell junction, gap junction
+Mitochondrion inner membrane
+Cytoplasm, cytoskeleton, microtubule organizingcenter, centrosome
+Cell projection,filopodium membrane
+Golgi apparatus, Golgi stack membrane
+Cytoplasm, cytoskeleton,spindle pole
+Cytoplasm, cytoskeleton, microtubuleorganizing center, centrosome, centriole
+Peroxisome matrix
+Note=Associated withmitochondria of the midpiece and near the plasma membrane in theprincipal piece of the flagellum
+Alsolocalized to the interphase centrosome and the mitotic spindle poles
+Alsopresent extramitochondrially, with a fraction present in the cytosoland very small amounts also detected in the nucleus
+Cell projection, dendrite
+Cell projection, invadopodium membrane
+Note=Enriched at the centrosomes during mitosis
+Cellmembrane
+Nucleus, Cajal body
+Cellprojection, growth cone
+Single-pass type II membrane protein
+Lateralcell membrane
+Note=Localizes to the trans-Golgi network as part of the GARP complex,while it localizes to recycling endosomes as part of the EARP complex
+Cell projection, cilium membrane
+Vacuole membrane
+Cytoplasm,cytoskeleton, spindle pole
+Cytoplasm, cytoskeleton,cilium basal body
+Mitochondrionouter membrane
+Multi-passmembrane protein
+Cell projection, growth cone
+Nucleus, nuclear pore complex
+Localizes to the midbody of dividing cells, and thisrequires CHMP1B
+Golgiapparatus, cis-Golgi network membrane
+Mature form is secreted and released in the extracellularmilieu by passing through the gasdermin-D (GSDMD) pore
+Cytoplasm, cytoskeleton, microtubule organizingcenter
+Cytoplasm, cytoskeleton,microtubule organizing center, centrosome, centriole
+Cytoplasm,perinuclear region
+Late endosome membrane
+Cell junction, paranodal septate junction
+Cytoplasm, cytoskeleton, microtubuleorganizing center, centrosome
+Cytoplasm,cytoskeleton
+Cytoplasmic vesicle, COPI-coatedvesicle membrane
+Golgi apparatus, trans-Golgi networkmembrane
+Sarcoplasmicreticulum membrane
+Cell projection, neuronprojection
+Nucleoplasmic side
+Matrixside
+Cell junction, adherens junction
+Cell projection,dendritic spine
+Cytoplasmic vesicle, COPII-coatedvesicle membrane
+Note=Localization to the plasmamembrane and alternative topologies have also been reported
+Cytoplasmic vesicle, secretory vesicle, chromaffin granule membrane
+Cytoplasm, cytoskeleton, ciliumaxoneme
+Cytoplasmic vesicle, secretory vesicle, synapticvesicle
+Cytoplasm, cytoskeleton, cilium axoneme
+Note=Secreted in plasma
+Some of thebound LPL is then internalized and located inside non-coated endocyticvesicles
+CC   -!- SUBCELLULAR LOCATION: [Tumor necrosis factor, soluble form]: Secreted
+Secreted
+Early endosome
+Note=Localizes at sites of DNA damage at double-strand breaks (DSBs)
+Note=Colocalized with methyl-CpG in the genome
+Cytoplasm, cytoskeleton, cilium basalbody
+Postsynaptic density
+Note=About 30% of expressed METAP2 associates with polysomes
+Lysosome
+Peroxisome
+Localization to the centrosome is independent ofmicrotubules
+Cytoplasm, P-body
+Also found in the epididymosome,secreted by the epididymal epithelium and that transfers proteins fromthe epididymal fluid to the sperm surface
+Membrane,caveola
+Note=Shuttles between the nucleus andthe cytoplasm
+Golgi apparatus, cis-Golgi networkmembrane
+Note=Translocated to plasma membranein epithelial cells stimulated by HGF
+Perikaryon
+Target cell membrane
+Cell projection, ruffle membrane
+Cytoplasm, perinuclearregion
+Cytoplasmic vesicle lumen
+Dephosphorylation at this siteby SHP2 retains TERT in the nucleus
+Note=In sperm, secretiongradually increases during capacitation
+Note=Localizes at sites ofDNA damage at double-strand breaks (DSBs)
+Mitochondrion membrane
+Nucleus speckle
+Inflammasome
+Cytoplasmicvesicle membrane
+Cytoplasmic vesicle, secretory vesicle, acrosome
+Lipid-anchor, GPI-anchor
+Cytoplasmic vesicle, secretory vesicle membrane
+Cytoplasmic vesicle, secretory vesicle
+Secreted, extracellular space, extracellular matrix, basement membrane
+Cellprojection, dendrite
+Thesecretion is dependent on protein unfolding and facilitated by thecargo receptor TMED10
+Single-pass type IImembrane protein
+Cell projection, growth cone membrane
+Cytoplasmic vesicle, phagosome membrane
+Multi-pass membraneprotein
+Single-pass type I membrane protein
+Localizes within the cytoplasm, partially overlapping withmicrotubules, in interphase and to the mitotic spindle and spindlepoles during mitosis
+Dynein axonemal particle
+Predominantlycytoplasmic
+Cytoplasm, cytoskeleton,spindle
+Cytoplasmic vesicle, autophagosome membrane
+Myelin membrane
+Cell projection,dendrite
+Note=Localizes in the apical cytoplasm around the gamma-tubulin-positive pericentriolar region, not in the cilia
+Translocated to the nucleus byphosphorylation by AKT
+Note=Weaklyassociates with mitochondria, possibly via QTRT2
+Celljunction, focal adhesion
+CC   -!- SUBCELLULAR LOCATION: [Phosphatidylserine decarboxylase beta chain]:Mitochondrion inner membrane
+CC   -!- SUBCELLULAR LOCATION: [Phosphatidylserine decarboxylase alpha chain]:Mitochondrion inner membrane
+Golgi apparatus, trans-Golgi network
+Nucleusinner membrane
+Extracellularside
+Preautophagosomal structure membrane
+Note=Resides mostly inthe nucleoli and relocalizes to the nucleoplasm upon DNA damage
+Note=67LR isfound at the surface of the plasma membrane, with its C-terminallaminin-binding domain accessible to extracellular ligands
+Enriched in the distal axons and branches ofpostmitotic neurons
+Cellprojection, filopodium
+Cytoplasm, cytoskeleton, microtubuleorganizing center, centrosome, centriolar satellite
+Peripheralmembrane protein
+Cell membrane, sarcolemma
+Cell projection, filopodium
+May localize to the nuclearmembrane
+Cell projection,neuron projection
+Microsomemembrane
+Cytoplasm, cell cortex
+Secreted, extracellular space, extracellularmatrix
+CC   -!- SUBCELLULAR LOCATION: [C-domain 1]: Secreted
+Membrane, caveola
+Also found in the epididymosome, secreted by the epididymalepithelium and that transfers proteins from the epididymal fluid to thesperm surface
+Nucleus
+Nucleus, nucleolus
+Nucleus, PML body
+Mitochondrion outer membrane
+Note=Concentrates at endoplasmicreticulum exit sites (ERES), also known as transitional endoplasmicreticulum (tER)
+Single-pass type III membrane protein
+Cell junction
+Matrix side
+Endoplasmic reticulum lumen
+Cell projection, microvillus membrane
+Nucleus matrix
+Locates to the plasma membrane of microvilli ofhepatocytes with triglyceride-rich lipoproteins (TRL)
+Cytoplasm, cytoskeleton,flagellum axoneme
+Secreted, extracellular space,extracellular matrix
+Celljunction, tight junction
+Cell projection, podosome
+Cytoplasm, Stress granule
+Note=SMN-mediated assembly into coresnRNPs occurs in the cytosol before SMN-mediated transport to thenucleus to be included in spliceosomes
+Note=Localizes at sites of DNA damageat double-strand breaks (DSBs)
+Cytoplasm, cytoskeleton,microtubule organizing center, centrosome
+Alsolocalizes to the microtubules of the manchette in elongating spermatidsand to the meiotic spindle in spermatocytes
+Mitochondrion
+Peripheral membraneprotein
+Secreted, extracellular space, surface film
+Lysosomemembrane
+Cytoplasm, cytoskeleton
+Note=Forms an intramembrane hairpin-like structure inthe membrane
+In anaphase and telophase islocalized at the midbody region
+Lipid-anchor
+Single-pass membraneprotein
+Preautophagosomal structure
+Cytoplasm,cytoskeleton, cilium basal body
+Nucleus, nucleoplasm
+Secreted,extracellular space
+Synapse, synaptosome
+Basolateral cell membrane
+Cleavage furrow
+Early endosome membrane
+Cell junction, desmosome
+Secreted, extracellular space
+Nucleus outer membrane
+Intermembraneside
+Cellprojection, invadopodium membrane
+Endoplasmic reticulum
+Localized diffusely inthe cytoplasm during the interphase
+Cell projection, invadopodium
+Cell projection, filopodium membrane
+Lysosome lumen
+Membrane, coated pit
+Single-pass type II membraneprotein
+Cell projection, dendritic spine
+Golgiapparatus, Golgi stack
+Localized diffusely in the cytoplasm during theinterphase
+Postsynapse
+Sarcoplasmic reticulum lumen
+Cell membrane
+Cell junction, focal adhesion
+Basolateral cellmembrane
+Enriched innucleoli of certain cell types
+Endosome membrane
+Note=The precursor is cytosolic
+Cytoplasmic granule
+Note=Localizes within the cytoplasm, partially overlapping withmicrotubules in interphase and to the mitotic spindle and spindle polesduring mitosis
+Inresponse to inflammasome-activating signals, such as ATP for NLRP3inflammasome or bacterial flagellin for NLRC4 inflammasome, cleaved andsecreted
+Cell projection
+recruitment to DNA damagesites is mediated by the BRCA1-A complex
+Postsynaptic density membrane
+Cytoplasmic vesicle, autophagosome
+Cell membrane, sarcolemma, T-tubule
+Endoplasmicreticulum
+Presynapse
+Lysosome membrane
+Note=Found in endoplasmic reticulumwhere most PEMT activity is generated and in mitochondria
+Endosome
+Lateral cell membrane
+Endomembrane system
+Note=SMN-mediated assembly into core snRNPs occurs in the cytosolbefore SMN-mediated transport to the nucleus to be included inspliceosomes
+Endosomemembrane
+Earlyendosome
+Late endosome
+Translocated to the nucleus in PMA-treated cells
+Golgiapparatus, trans-Golgi network
+Endoplasmicreticulum membrane
+Golgi apparatus, Golgi stack
+Also localized to the interphasecentrosome and the mitotic spindle poles
+During metaphase is localizedthroughout the cell and more widely dispersed than the microtubules
+Lateendosome
+Host cytoplasm
+Rough endoplasmic reticulum membrane
+Sarcoplasmic reticulum membrane
+Endoplasmic reticulum membrane
+Note=Localized incytoplasmic mRNP granules containing untranslated mRNAs
+Membraneraft
+Cytoplasmic vesicle, secretoryvesicle, chromaffin granule lumen
+Cytoplasmic vesicle, clathrin-coated vesiclemembrane
+Note=Specifically localizesto mitotic chromosomes
+Golgi apparatus, trans-Golgi network membrane
+Synapse,synaptosome
+Cell projection,ruffle membrane
+Note=Colocalizes with AIFM1in the nucleus and perinuclear region
+Cell projection, axon
+Cellprojection, neuron projection
+Cytoplasmic vesicle, secretory vesicle,chromaffin granule lumen
+Endosome, multivesicular body
+Cytoplasmic vesicle, secretory vesicle,chromaffin granule membrane
+Cell projection,lamellipodium
+Cytoplasmic vesicle,COPI-coated vesicle membrane
+Lumenalside
+Golgi apparatus lumen
+Cell projection,growth cone membrane
+Cytoplasmic vesicle, secretoryvesicle, chromaffin granule
+Cell projection, lamellipodium
+Lipid droplet
+Cellprojection
+Note=The coatomer is cytoplasmic orpolymerized on the cytoplasmic side of the Golgi, as well as on thevesicles/buds originating from it
+Secreted, extracellularspace, extracellular matrix
+Melanosome
+Golgiapparatus membrane
+Cytoplasm, cytoskeleton, flagellumaxoneme
+Diffuse localization in the nucleoplasm
+Co-localizes with PPP1R16B in the cell membrane
+Note=In Purkinje cells, the proteinlocalizes to the soma and proximal portion of the dendritic tree
+Note=Appears to localizeto the periphery of metaphase chromosomes during mitosis and to theprenucleolar bodies that form in mitotic cells prior to the actualnucleoli
+Note=Mainly cytoplasmic, small amountare found in the nucleus
+Cytoplasmic vesicle, secretory vesiclelumen
+Cytoplasmic vesicle, secretory vesicle, synapticvesicle membrane
+Endoplasmic reticulum-Golgiintermediate compartment
+Subsequently, it becomes attached to heparan proteoglycan onendothelial cells
+Associated with the Golgi at theperinuclear site in pre-passage fibroblasts
+Membrane, clathrin-coated pit
+Nucleus membrane
+In contrast,the precursor form is not released, due to the presence of an acidicregion that is proteolytically removed by CASP1 during maturation
+Cytoplasmic vesicle, autophagosomemembrane
+Cytoplasm, myofibril, sarcomere
+Nucleusmembrane
+Recycling endosome
+Secreted, extracellular space, extracellularmatrix, interphotoreceptor matrix
+Cytoplasmic vesicle, secretoryvesicle, synaptic vesicle membrane
+Cytoplasmic vesicle
+Secreted, extracellular exosome
+Cellprojection, axon
+Golgi apparatus,trans-Golgi network
+Note=Mainly cytoplasmic, small amount are found in the nucleus
+Note=Mainly mitochondrial
+Cytoplasmic vesicle, secretory vesicle, acrosomemembrane
+Peroxisome membrane
+Cell projection, neuron projection
+Photoreceptorinner segment
+Cytoplasmic vesiclemembrane
+37LRP isfound at the cell surface, in the cytoplasm and in the nucleus
+Apical cell membrane
+Endoplasmic reticulum-Golgiintermediate compartment membrane
+Cytoplasmic vesicle, secretory vesicle lumen
+Chromosome, telomere
+Cytoplasm, cellcortex
+Endosome, multivesicular body membrane
+Endoplasmic reticulum-Golgi intermediatecompartment membrane
+Secreted, extracellular space, extracellularmatrix, basement membrane
+Intermembrane side
+Cytoplasm, cytoskeleton, spindlepole
+Membrane raft
+recruitment to DNA damage sites ismediated by the BRCA1-A complex
+Nucleus envelope
+Note=Colocalizes withmicrotubules throughout the basal and adluminal compartments of Sertolicells
+Cell projection,cilium membrane
+Cytoplasm, cytosol
+Nucleus innermembrane
+Synaptic cell membrane
+Note=Predominantly cytoplasmic
+Secreted, extracellular space, extracellular matrix
+Golgi apparatus
+Cytoplasmic vesicle, COPI-coated vesicle membrane
+Cell projection, filopodium tip
+Microsome
+Cytoplasm, cytoskeleton, cilium basal body
+Single-pass type I membraneprotein
+Cytoplasm, cytoskeleton, microtubule organizing center, centrosome
+CC   -!- SUBCELLULAR LOCATION: [C-domain 2]: Secreted
+Note=Newly synthesized LPL binds tocell surface heparan proteoglycans and is then released by heparanase
+Cellsurface
+Recycling endosome membrane
+Golgi outpost
+Cytoplasm, myofibril, sarcomere, Iband
+Mitochondrion matrix
+Cellprojection, dendritic spine
+Cell projection, dendriticspine
+Mitochondrionmembrane
+Cytoplasm, cytoskeleton, microtubule organizing center
+Cell surface
+Peroxisomemembrane
+Peripheral membrane protein
+Cytoplasmic vesicle, clathrin-coatedvesicle membrane
+Multi-pass membrane protein
+Mitochondrion intermembrane space
+Cytoplasm, cytoskeleton, microtubule organizingcenter, centrosome, centriole
+Inanaphase and telophase is localized at the midbody region
+Cytoplasmic vesicle, phagosomemembrane

@@ -1,0 +1,18 @@
+#compiled files and notebooks checkpoints
+.ipynb_checkpoints
+__pycache__/
+*.pyc
+
+#idea files
+.idea/
+
+#logs
+*.out
+*.log
+*.err
+
+
+# big data files
+data/*.xz
+data/*.gz
+*.npz
