@@ -13,6 +13,6 @@ __pycache__/
 
 
 # big data files
-data/*.xz
+#data/*.xz
 data/*.gz
 *.npz
