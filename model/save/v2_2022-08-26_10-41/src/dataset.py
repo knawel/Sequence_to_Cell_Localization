@@ -4,10 +4,22 @@ import pickle
 import lzma
 from src.data_encoding import encode_res, all_resnames, encode_location
 from glob import glob
-
 import os
 
+
 def read_fasta(ifile):
+    """ Take file (fasta sequence) and extract the protein name and sequence
+
+    Parameters
+    ----------
+    ifile : str
+        path to the file
+
+    Return
+    ------
+    sequence, protein name
+
+    """
     seq = ""
     with open(ifile, 'r') as iFile:
         for i in iFile:
@@ -20,6 +32,24 @@ def read_fasta(ifile):
 
 
 class SeqDataset(pt.utils.data.Dataset):
+    """
+    A class used to store Dataset for training
+
+    Attributes
+    ----------
+    ids : numpy array
+        list of protein ID
+    seq : numpy array
+        list of sequences
+    loc : numpy array
+        list of locations (each is string)
+    nres_max : int
+        the maximal length of sequence
+
+    Methods
+    -------
+    """
+
     def __init__(self, filepath, nres_max):
         super(SeqDataset, self).__init__()
         with lzma.open(filepath, "r") as f:
@@ -94,5 +124,3 @@ class FastaDataset(pt.utils.data.Dataset):
 
     def getall(self):
         return self.iddata, pt.stack(self.sdata_enc)
-
-

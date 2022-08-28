@@ -2,12 +2,24 @@ import numpy as np
 import torch as pt
 import pickle
 import lzma
-from src.data_encoding import encode_res, all_resnames, encode_location
+from src.data_encoding import encode_res, encode_location
 from glob import glob
-
 import os
 
+
 def read_fasta(ifile):
+    """ Take file (fasta sequence) and extract the protein name and sequence
+
+    Parameters
+    ----------
+    ifile : str
+        path to the file
+
+    Return
+    ------
+    sequence, protein name
+
+    """
     seq = ""
     with open(ifile, 'r') as iFile:
         for i in iFile:
@@ -20,28 +32,59 @@ def read_fasta(ifile):
 
 
 class SeqDataset(pt.utils.data.Dataset):
-    def __init__(self, filepath, nres_max):
+    """
+    A class used to store Dataset for training
+
+    Attributes
+    ----------
+    ids : numpy.ndarray
+        list of protein ID
+    seq : numpy.ndarray
+        list of sequences
+    loc : numpy.ndarray
+        list of locations (each is string)
+    nres_max : int
+        the maximal length of sequence
+
+    Methods
+    -------
+    """
+
+    def __init__(self, filepath, seq_max):
+        """
+        Parameters
+        ----------
+        filepath : str
+            Path to the pre-processed file
+        seq_max : int
+            Maximal length of the sequence, bigger sequences will be ignored
+
+        Raises
+        ------
+        NotImplementedError
+            If number of sequence, ID or locations is not the same.
+        """
         super(SeqDataset, self).__init__()
         with lzma.open(filepath, "r") as f:
             self.combined_data = pickle.load(f)
         self.ids = np.array(self.combined_data['ids'])
         self.seq = np.array(self.combined_data['seq'])
         self.loc = np.array(self.combined_data['loc'])
-        self.nres_max = nres_max
+        self.seq_max = seq_max
 
         n1 = len(self.ids)
         n2 = len(self.seq)
         n3 = len(self.loc)
 
         if (n1 != n2) or (n1 != n3):
-            raise ValueError("Different size of ids/seq/loc")
+            raise NotImplementedError("Different size of ids/seq/loc")
 
-        # filter the seq greater than nres_max
+        # filter the seq greater than seq_max
         lengths = []
         for i in self.seq:
             lengths.append(len(i))
         lengths = np.array(lengths)
-        length_mask = lengths <= self.nres_max
+        length_mask = lengths <= self.seq_max
         self.ids = self.ids[length_mask]
         self.seq = self.seq[length_mask]
         self.loc = self.loc[length_mask]
@@ -50,19 +93,38 @@ class SeqDataset(pt.utils.data.Dataset):
         return len(self.seq)
 
     def __getitem__(self, index):
-        # seq_enc = pt.unsqueeze(encode_res(self.seq[index], self.nres_max), dim=1)
-        seq_enc = encode_res(self.seq[index], self.nres_max)
+        # seq_enc = pt.unsqueeze(encode_res(self.seq[index], self.seq_max), dim=1)
+        seq_enc = encode_res(self.seq[index], self.seq_max)
         loc_enc = pt.tensor(encode_location(self.loc[index]), dtype=pt.float64)
         return seq_enc, loc_enc
 
+
 class FastaDataset(pt.utils.data.Dataset):
+    """
+    A class used to evaluate examples
+
+    Attributes
+    ----------
+    iddata : numpy.ndarray
+        list of protein names
+    sdata : numpy.ndarray
+        list of sequences
+    sdata : numpy.ndarray
+        list of encoded sequences
+    nresmax : int
+        the maximal length of sequence
+
+    Methods
+    -------
+    get_all()
+        Return ID and encoded sequence (as tensor)
+    """
 
     def __init__(self, folder, nres_max):
         self.sdata = []
         self.iddata = []
-        self.paths = glob(os.path.join(folder, "*"))
         self.nresmax = nres_max
-        for i in self.paths:
+        for i in glob(os.path.join(folder, "*")):
             S, I = read_fasta(i)
             self.sdata.append(S)
             self.iddata.append(I)
@@ -87,12 +149,21 @@ class FastaDataset(pt.utils.data.Dataset):
         return len(self.sdata_enc)
 
     def __getitem__(self, index):
+
         i = self.iddata[index]
         s = self.sdata_enc[index]
 
         return i, s
 
-    def getall(self):
+    def get_all(self):
+        """ Return ID and encoded sequence (as tensor)
+
+        Parameters
+        ----------
+
+        Return
+        ------
+        protein names, sequences
+
+        """
         return self.iddata, pt.stack(self.sdata_enc)
-
-
