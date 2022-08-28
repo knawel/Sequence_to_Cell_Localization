@@ -34,4 +34,4 @@ The protein sequence is encoded as one-hot vector using 24 residue symbols (incl
 
 # Model
 Model is LSTM with 3 fully connected layers
-![image](docs/eq2loc.png)
+![image](docs/seq2loc.png)

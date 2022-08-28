@@ -32,6 +32,7 @@ def read_fasta(ifile):
 
 
 def get_stat_from_dataset(seq_dataset):
+    """Get distribution of one-hot vectors."""
     all_locations = []
     for i in seq_dataset:
         j = i[1].numpy()
@@ -112,6 +113,7 @@ class SeqDataset(pt.utils.data.Dataset):
         return seq_enc, loc_enc
 
     def get_stat(self):
+        """Get distribution of one-hot vectors."""
         all_locations = []
 
         for i in self.loc:
@@ -141,8 +143,25 @@ class FastaDataset(pt.utils.data.Dataset):
     """
 
     def __init__(self, folder, nres_max):
-        self.sdata = []
+        """
+        Parameters
+        ----------
+        iddata : numpy.ndarray
+            list of protein names
+        sdata : numpy.ndarray
+            list of sequences
+        sdata : numpy.ndarray
+            list of encoded sequences
+        nresmax : int
+            the maximal length of sequence
+
+        Raises
+        ------
+        NotImplementedError
+            If number of sequence, ID or locations is not the same.
+        """
         self.iddata = []
+        self.sdata = []
         self.nresmax = nres_max
         for i in glob(os.path.join(folder, "*")):
             S, I = read_fasta(i)
