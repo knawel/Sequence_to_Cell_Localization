@@ -28,7 +28,13 @@ class Logger:
         self.ts = self.t0
 
     def print(self, line_raw):
-        """Write string to log file and print to console if verbose active."""
+        """Write string to log file and print to console if verbose active. New line is added.
+        Parameters
+        ----------
+        line_raw : str
+            line to print
+        """
+
         # convert line to string
         line = str(line_raw)
 

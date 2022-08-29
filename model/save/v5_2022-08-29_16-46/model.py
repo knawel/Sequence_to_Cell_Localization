@@ -20,7 +20,7 @@ class RNN(nn.Module):
         self.fc2 = nn.Linear(self.hidden2, self.hidden3)
         self.fc3 = nn.Linear(self.hidden3, num_classes)
         self.relu = nn.ReLU()
-        # self.hidden2tag = nn.Linear(self.hidden_size, num_classes)
+        self.hidden2tag = nn.Linear(self.hidden_size, num_classes)
         self.device = dev
 
     def forward(self, x):
@@ -28,11 +28,12 @@ class RNN(nn.Module):
         h0 = Variable(pt.zeros(self.num_layers, x.size(0), self.hidden_size).float()).to(self.device)
         c0 = Variable(pt.zeros(self.num_layers, x.size(0), self.hidden_size).float()).to(self.device)
         out, _ = self.lstm(x, (h0, c0))
-        out = self.relu(self.fc1(out[:, -1, :]))
-        out = self.relu(self.fc2(out))
-        tag_scores = self.fc3(out)
-        # tag_space = self.hidden2tag(out[:, -1, :])
-        # tag_scores = F.log_softmax(tag_space, dim=1)
-        return tag_scores
+        # out = self.relu(self.fc1(out[:, -1, :]))
+        # out = self.relu(self.fc2(out))
+        # tag_scores = self.fc3(out)
+        # tag_space = self.fc3(out)
+        tag_space = self.hidden2tag(out[:, -1, :])
+        # tag_scores = F.softmax(tag_space, dim=1)
+        return tag_space
 
 

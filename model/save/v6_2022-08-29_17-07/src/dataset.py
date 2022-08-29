@@ -31,7 +31,22 @@ def read_fasta(ifile):
     return seq, ids
 
 
+def fasta_to_vector(fasta_seq: str, nres_max: int):
+    """Convert fasta sequence to the vector for the model
+
+    :todo: could cut the sequence and compute probabilities for one fragment (or compute average for several)
+    """
+    n = len(fasta_seq.replace(" ", ""))
+    if n >= nres_max:
+        return None
+    else:
+        enc_seq = encode_res(fasta_seq, nres_max)
+        enc_seq_unsqueezed = enc_seq[None, :]  # add one dimension for model
+        return enc_seq_unsqueezed
+
+
 def get_stat_from_dataset(seq_dataset):
+    """Get distribution of one-hot vectors."""
     all_locations = []
     for i in seq_dataset:
         j = i[1].numpy()
@@ -41,6 +56,7 @@ def get_stat_from_dataset(seq_dataset):
     for i, value in enumerate(summary):
         report += f'{selected_locations[i]}: {str(int(value))}\n'
     return report
+
 
 class SeqDataset(pt.utils.data.Dataset):
     """
@@ -112,78 +128,9 @@ class SeqDataset(pt.utils.data.Dataset):
         return seq_enc, loc_enc
 
     def get_stat(self):
+        """Get distribution of one-hot vectors."""
         all_locations = []
 
         for i in self.loc:
             all_locations.append(encode_location(i))
         return np.sum(np.array(all_locations), axis=0)
-
-
-class FastaDataset(pt.utils.data.Dataset):
-    """
-    A class used to evaluate examples
-
-    Attributes
-    ----------
-    iddata : numpy.ndarray
-        list of protein names
-    sdata : numpy.ndarray
-        list of sequences
-    sdata : numpy.ndarray
-        list of encoded sequences
-    nresmax : int
-        the maximal length of sequence
-
-    Methods
-    -------
-    get_all()
-        Return ID and encoded sequence (as tensor)
-    """
-
-    def __init__(self, folder, nres_max):
-        self.sdata = []
-        self.iddata = []
-        self.nresmax = nres_max
-        for i in glob(os.path.join(folder, "*")):
-            S, I = read_fasta(i)
-            self.sdata.append(S)
-            self.iddata.append(I)
-
-        self.sdata = np.array(self.sdata)
-        self.iddata = np.array(self.iddata)
-
-        # filter the seq greater than nres_max
-        lengths = []
-        for i in self.sdata:
-            lengths.append(len(i))
-        lengths = np.array(lengths)
-        length_mask = lengths <= self.nresmax
-        self.sdata = list(self.sdata[length_mask])
-        self.iddata = list(self.iddata[length_mask])
-
-        self.sdata_enc = []
-        for i in self.sdata:
-            self.sdata_enc.append(encode_res(i, self.nresmax))
-
-    def __len__(self):
-        return len(self.sdata_enc)
-
-    def __getitem__(self, index):
-
-        i = self.iddata[index]
-        s = self.sdata_enc[index]
-
-        return i, s
-
-    def get_all(self):
-        """ Return ID and encoded sequence (as tensor)
-
-        Parameters
-        ----------
-
-        Return
-        ------
-        protein names, sequences
-
-        """
-        return self.iddata, pt.stack(self.sdata_enc)

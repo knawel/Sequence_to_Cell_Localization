@@ -9,15 +9,21 @@ config_data = {
 tag = datetime.now().strftime("_%Y-%m-%d_%H-%M")
 
 config_runtime = {
-    'run_name': 'v1' + tag,
+    'run_name': 'v5' + tag,
     'output_dir': 'save',
     'device': 'cuda',
-    'num_epochs': 16,
-    'batch_size': 64,
+    'num_epochs': 15,
+    'batch_size': 256,
     'log_step': 1024,
     'learning_rate': 1e-4,
-    'hidden_size': 32,
+    'hidden_size': 64,
     'layers': 2
 }
 
-# v1 - length = 1500, small net
+# v1   -  length = 1500, small net
+# v3   -  LSTM layers = 1
+# v3   -  smaller LR
+# v4   -  add softmax for output
+# v5   - without softmax, just output
+
+

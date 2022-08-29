@@ -2,7 +2,7 @@ import numpy as np
 import torch as pt
 import pickle
 import lzma
-from src.data_encoding import encode_res, encode_location
+from src.data_encoding import encode_res, encode_location, selected_locations
 from glob import glob
 import os
 
@@ -31,6 +31,33 @@ def read_fasta(ifile):
     return seq, ids
 
 
+def fasta_to_vector(fasta_seq: str, nres_max: int):
+    """Convert fasta sequence to the vector for the model
+
+    :todo: could cut the sequence and compute probabilities for one fragment (or compute average for several)
+    """
+    n = len(fasta_seq.replace(" ", ""))
+    if n >= nres_max:
+        return None
+    else:
+        enc_seq = encode_res(fasta_seq, nres_max)
+        enc_seq_unsqueezed = enc_seq[None, :]  # add one dimension for model
+        return enc_seq_unsqueezed
+
+
+def get_stat_from_dataset(seq_dataset):
+    """Get distribution of one-hot vectors."""
+    all_locations = []
+    for i in seq_dataset:
+        j = i[1].numpy()
+        all_locations.append(j)
+    summary = np.sum(np.array(all_locations), axis=0)
+    report = ""
+    for i, value in enumerate(summary):
+        report += f'{selected_locations[i]}: {str(int(value))}\n'
+    return report
+
+
 class SeqDataset(pt.utils.data.Dataset):
     """
     A class used to store Dataset for training
@@ -48,6 +75,8 @@ class SeqDataset(pt.utils.data.Dataset):
 
     Methods
     -------
+    get_stat()
+        Return statistics of locations
     """
 
     def __init__(self, filepath, seq_max):
@@ -98,6 +127,14 @@ class SeqDataset(pt.utils.data.Dataset):
         loc_enc = pt.tensor(encode_location(self.loc[index]), dtype=pt.float64)
         return seq_enc, loc_enc
 
+    def get_stat(self):
+        """Get distribution of one-hot vectors."""
+        all_locations = []
+
+        for i in self.loc:
+            all_locations.append(encode_location(i))
+        return np.sum(np.array(all_locations), axis=0)
+
 
 class FastaDataset(pt.utils.data.Dataset):
     """
@@ -121,8 +158,25 @@ class FastaDataset(pt.utils.data.Dataset):
     """
 
     def __init__(self, folder, nres_max):
-        self.sdata = []
+        """
+        Parameters
+        ----------
+        iddata : numpy.ndarray
+            list of protein names
+        sdata : numpy.ndarray
+            list of sequences
+        sdata : numpy.ndarray
+            list of encoded sequences
+        nresmax : int
+            the maximal length of sequence
+
+        Raises
+        ------
+        NotImplementedError
+            If number of sequence, ID or locations is not the same.
+        """
         self.iddata = []
+        self.sdata = []
         self.nresmax = nres_max
         for i in glob(os.path.join(folder, "*")):
             S, I = read_fasta(i)

@@ -23,6 +23,7 @@ def train(config_data, config_runtime):
     train_dataset, test_dataset = random_split(dataset, [len(dataset) - 2502, 2502])
 
     # log
+    logger.print(device)
     logger.print(f"length of the dataset is: {len(dataset)}")
     logger.print(get_stat_from_dataset(dataset))
     logger.print(f"Train: {len(train_dataset)}")
