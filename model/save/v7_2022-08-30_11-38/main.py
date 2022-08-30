@@ -27,9 +27,9 @@ def train(config_data, config_runtime):
     logger.print(f"length of the dataset is: {len(dataset)}")
     # logger.print(get_stat_from_dataset(dataset))
     logger.print(f"Train: {len(train_dataset)}")
-    # logger.print(get_stat_from_dataset(train_dataset))
+    logger.print(get_stat_from_dataset(train_dataset))
     logger.print(f"Test: {len(test_dataset)}")
-    # logger.print(get_stat_from_dataset(test_dataset))
+    logger.print(get_stat_from_dataset(test_dataset))
 
     n_letters = len(all_resnames)
     n_categories = len(selected_locations)

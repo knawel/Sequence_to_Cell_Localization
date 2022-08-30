@@ -1,0 +1,29 @@
+from datetime import datetime
+
+config_data = {
+    'dataset_filepath': "data/data_seq_locations.xz",
+    'sequence_max_length': 700
+}
+
+# Tag for name of the model
+tag = datetime.now().strftime("_%Y-%m-%d_%H-%M")
+
+config_runtime = {
+    'run_name': 'v7' + tag,
+    'output_dir': 'save',
+    'device': 'cuda',
+    'num_epochs': 16,
+    'batch_size': 64,
+    'log_step': 1024,
+    'learning_rate': 1e-4,
+    'hidden_size': 64,
+    'layers': 3
+}
+
+# v1   -  length = 1500, small net
+# v3   -  LSTM layers = 1
+# v3   -  smaller LR
+# v4   -  add softmax for output
+# v5   - without softmax, just output
+
+

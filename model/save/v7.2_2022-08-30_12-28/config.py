@@ -9,23 +9,18 @@ config_data = {
 tag = datetime.now().strftime("_%Y-%m-%d_%H-%M")
 
 config_runtime = {
-    'run_name': 'v8.2' + tag,
+    'run_name': 'v7.2' + tag,
     'output_dir': 'save',
     'device': 'cuda',
-    'num_epochs': 48,
-    'batch_size': 128,
+    'num_epochs': 20,
+    'batch_size': 64,
     'log_step': 1024,
     'learning_rate': 1e-4,
-    'hidden_size': 32,
-    'layers': 1
+    'hidden_size': 64,
+    'layers': 2
 }
 
 # v7 finally works with long prots and CrossEntropyLoss
-# 7.2 list of 3: membrane, cytosol and nuclear, works good
-# 7.3, loss fn is BCEWithLogitsLoss
-# 8 one layer of LSTM
-# 8.1 bigger batch, smaller net
-# 8.15 bigger LR
-# 8.2 added vesicl
+# v7.2 list of 3: membrane, cytosol and nuclear
 
 

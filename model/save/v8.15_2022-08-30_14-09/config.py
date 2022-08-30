@@ -9,11 +9,11 @@ config_data = {
 tag = datetime.now().strftime("_%Y-%m-%d_%H-%M")
 
 config_runtime = {
-    'run_name': 'v8.2' + tag,
+    'run_name': 'v8.15' + tag,
     'output_dir': 'save',
     'device': 'cuda',
     'num_epochs': 48,
-    'batch_size': 128,
+    'batch_size': 256,
     'log_step': 1024,
     'learning_rate': 1e-4,
     'hidden_size': 32,
@@ -26,6 +26,6 @@ config_runtime = {
 # 8 one layer of LSTM
 # 8.1 bigger batch, smaller net
 # 8.15 bigger LR
-# 8.2 added vesicl
+
 
 

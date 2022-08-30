@@ -13,7 +13,7 @@ all_resnames = np.array(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L',
 # selected_locations = ['membrane', 'cytoplasm', 'mitoch',
 #                       'nucle', 'cytoskel', 'golgi']
 
-selected_locations = ['membrane', 'cytoplasm', 'nucle', 'vesicl']
+selected_locations = ['membrane', 'cytoplasm', 'nucle']
 
 
 def onehot(x, v):
