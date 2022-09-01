@@ -14,8 +14,8 @@ class Logger:
         self.log_dir = log_dir
         self.log_name = log_name
         self.log_str_filepath = os.path.join(log_dir, log_name+'.log')
-        self.log_lst_filepath = os.path.join(log_dir, log_name+'.dat')
-
+        self.log_prg_filepath = os.path.join(log_dir, log_name+'progress')
+        self.epoch = 0
         # define logs
         self.log_s = ''
         self.log_l = []
@@ -49,28 +49,16 @@ class Logger:
         if self.verbose:
             print(line)
 
-    def store(self, **kwargs):
-        """Write to file any optional arguments in json format."""
-        # update list log
-        self.log_l.append(kwargs)
+    def store_progress(self, loss: float, is_train: bool, epoch=-1):
+        """Write to files the learning progress"""
+        if epoch >= 0:
+            self.epoch = epoch
+        else:
+            # update file
+            if is_train:
+                with open(self.log_prg_filepath + "_train.txt", 'a') as fs:
+                    fs.write(f'{self.epoch};{loss:.2f}\n')
+            else:
+                with open(self.log_prg_filepath + "_test.txt", 'a') as fs:
+                    fs.write(f'{self.epoch};{loss:.2f}\n')
 
-        # create series
-        s = pd.Series(kwargs)
-
-        # update log file
-        with open(self.log_lst_filepath, 'a') as fs:
-            fs.write(s.to_json()+'\n')
-
-    def print_profiling_info(self, n_curr, n_step, n_total):
-        """Log print profiling information about elapsed time and estimated time of arrival."""
-        dt = time() - self.t0
-        dts = time() - self.ts
-        eta = (n_total-n_curr)*dt/n_step
-        self.print("> Elapsed time: {}".format(timedelta(seconds=dt)))
-        self.print("> Since last call: {}".format(timedelta(seconds=dts)))
-        self.print("> ETA: {}".format(timedelta(seconds=eta)))
-        self.ts = time()
-
-    def restart_timer(self):
-        """Restart timer for the profiler."""
-        self.ts = time()

@@ -12,7 +12,7 @@ config_runtime = {
     'run_name': 'v8.2' + tag,
     'output_dir': 'save',
     'device': 'cuda',
-    'num_epochs': 48,
+    'num_epochs': 15,
     'batch_size': 128,
     'log_step': 1024,
     'learning_rate': 1e-4,

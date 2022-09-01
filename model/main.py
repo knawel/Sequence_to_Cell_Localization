@@ -4,7 +4,7 @@ from torch.utils.data import random_split
 from src.dataset import SeqDataset, get_stat_from_dataset
 from torch.utils.data import DataLoader
 from config import config_data, config_runtime
-
+from src.plots import plot_prg
 
 def train(config_data, config_runtime):
     from src.logger import Logger
@@ -16,14 +16,12 @@ def train(config_data, config_runtime):
 
     # start log
     logger = Logger("./", "log")
-
     # read datasets
     n_seq = config_data['sequence_max_length']
     dataset = SeqDataset(config_data['dataset_filepath'], n_seq)
     train_dataset, test_dataset = random_split(dataset, [len(dataset) - 2502, 2502])
 
     # log
-    logger.print(device)
     logger.print(f"length of the dataset is: {len(dataset)}")
     # logger.print(get_stat_from_dataset(dataset))
     logger.print(f"Train: {len(train_dataset)}")
@@ -60,6 +58,8 @@ def train(config_data, config_runtime):
             if batch % 100 == 0:
                 loss, current = loss.item(), batch * len(X)
                 logger.print(f"loss: {loss:>7f}  [{current:>5d}/{size:>5d}]")
+                logger.store_progress(loss, is_train=True)
+
 
     def test_loop(dataloader, model, loss_fn):
         size = len(dataloader.dataset)
@@ -78,6 +78,7 @@ def train(config_data, config_runtime):
         #     correct /= size
         #     print(f"Test Error: \n Accuracy: {(100*correct):>0.1f}%, Avg loss: {test_loss:>8f} \n")
         logger.print(f"Avg loss: {test_loss:>8f} \n")
+        logger.store_progress(test_loss, is_train=False)
 
     # train model
     train_dataloader = DataLoader(train_dataset, batch_size=config_runtime['batch_size'],
@@ -87,6 +88,7 @@ def train(config_data, config_runtime):
 
     for t in range(config_runtime['num_epochs']):
         logger.print(f"Epoch {t + 1}\n-------------------------------")
+        logger.store_progress(0, is_train=True, epoch=t+1)
         train_loop(train_dataloader, model, loss_fn, optimizer)
         test_loop(test_dataloader, model, loss_fn)
     logger.print("Done!")
@@ -97,3 +99,4 @@ def train(config_data, config_runtime):
 if __name__ == '__main__':
     # train model
     train(config_data, config_runtime)
+    plot_prg('./')
