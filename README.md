@@ -41,4 +41,4 @@ This model was trained with 70 epochs, batch size=256.
 ![image](docs/loss.png)
 
 # Results
-The balanced accuracy for this model is **73%** for prediction membrane localization and **76%** for nuclear localization. 
+The balanced accuracy for this model is **73%** for membrane and **76%** for nuclear localization. 
