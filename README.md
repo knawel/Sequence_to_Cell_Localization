@@ -27,7 +27,7 @@ CC       similarity). {ECO:0000250|UniProtKB:Q6NZM9}.
 </pre>
 
 Encoded location vector
-`[1, 1]`
+`[0, 1]`
 
 ## Sequence
 The protein sequence is encoded as one-hot vector using 24 residue symbols (including non-standard, line B is Aspartic acid or Asparagine) plus '#' as the placeholder when sequence is shorter than threshold. 
