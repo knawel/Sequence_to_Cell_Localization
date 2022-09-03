@@ -12,10 +12,10 @@ For training the model I used [Uniprot database](https://www.uniprot.org/) with 
 The actual dataset was obtained from Uniprot database, `uniprot_trembl_human` file.
 
 ## Localization
-The information about localization was converted into 1x4 vector, where 4 is number of target localizations (membrane, cytoplasm, mitochondrion and nucleus), each position represent occurance of the corresponding keyword. For example:
+The information about localization was converted into 1x2 vector, where 2 is number of target localizations (membrane and nucleus), each position represent occurance of the corresponding keyword. For example:
 Text
 <pre>
-CC   -!- SUBCELLULAR LOCATION: <b>Nucleus</b>. <b>Cytoplasm</b>. Note=Shuttles between the
+CC   -!- SUBCELLULAR LOCATION: <b>Nucleus</b>. Cytoplasm. Note=Shuttles between the
 CC       nucleus and the cytoplasm. Upon muscle cells differentiation, it
 CC       accumulates in the nuclei of myotubes, suggesting a positive role of
 CC       nuclear HDAC4 in muscle differentiation. The export to cytoplasm
@@ -27,7 +27,7 @@ CC       similarity). {ECO:0000250|UniProtKB:Q6NZM9}.
 </pre>
 
 Encoded location vector
-`[0, 1, 0, 1]`
+`[1, 1]`
 
 ## Sequence
 The protein sequence is encoded as one-hot vector using 24 residue symbols (including non-standard, line B is Aspartic acid or Asparagine) plus '#' as the placeholder when sequence is shorter than threshold. 
@@ -35,3 +35,9 @@ The protein sequence is encoded as one-hot vector using 24 residue symbols (incl
 # Model
 Model is LSTM with 3 fully connected layers
 ![image](docs/seq2loc.png)
+
+This model was trained with 70 epochs, batch size=256. 
+![image](docs/loss.png)
+
+# Results
+The balanced accuracy for this model is **0.73%** for prediction membrane localization and **0.76** for nuclear localization. 
