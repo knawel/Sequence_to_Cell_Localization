@@ -9,14 +9,14 @@ config_data = {
 tag = datetime.now().strftime("_%Y-%m-%d_%H-%M")
 
 config_runtime = {
-    'run_name': 'v8.2' + tag,
+    'run_name': 'v9' + tag,
     'output_dir': 'save',
     'device': 'cuda',
-    'num_epochs': 48,
-    'batch_size': 128,
+    'num_epochs': 70,
+    'batch_size': 256,
     'log_step': 1024,
-    'learning_rate': 1e-4,
-    'hidden_size': 32,
+    'learning_rate': 1e-5,
+    'hidden_size': 128,
     'layers': 1
 }
 
@@ -27,5 +27,11 @@ config_runtime = {
 # 8.1 bigger batch, smaller net
 # 8.15 bigger LR
 # 8.2 added vesicl
-
-
+# 8.3 locations: ['membrane', 'nucle', 'golgi']
+# 8.4 location ['membrane', 'nucle', 'extracell']
+# 8.5 location ['membrane', 'nucle', 'cytoskelet'], slightly bigger model, smaller LR
+# 8.6 all loc
+# 8.7 loc=5
+# 8.8 loc = membr or nucl
+# 8.9 bigger and longer
+# 9 with optimized num of epochs

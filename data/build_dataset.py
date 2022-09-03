@@ -1,5 +1,3 @@
-import re
-
 import numpy as np
 import pickle
 import lzma
@@ -7,22 +5,19 @@ import gzip
 from tqdm import tqdm
 import sys
 
-from src.data_encoding import encode_location, encode_res
-
-
 config_dataset = {
     # input filepaths
-    "data_filepaths": "./data/uniprot_trembl_human.dat.gz",
+    "data_filepaths": "./uniprot_trembl_human.dat.gz",
     # output filepath
-    "dataset_filepath": "./data/data_seq_locations.xz",
+    "dataset_filepath": "./data_seq_locations.xz",
 }
 
 
 def init_flags():
     return {
-    "new prot": True,
-    "location": False,
-    "sequence": False
+        "new prot": True,
+        "location": False,
+        "sequence": False
     }
 
 
@@ -67,7 +62,7 @@ if __name__ == "__main__":
             if flags['sequence']:
                 record[1] += i.strip()
 
-            # if comment, looking for cellular location section
+            # if commented, looking for cellular location section
             if line_start == "CC":
                 if "-!-" in i:
                     if "-!- SUBCELLULAR LOCATION:" in i:
@@ -103,7 +98,6 @@ if __name__ == "__main__":
         loc4 = loc1
         loc_list.append(loc4)
 
-
     # store metadata
     sys.stderr.write("Writing data\n")
     data_to_write = {
@@ -113,5 +107,4 @@ if __name__ == "__main__":
     }
     with lzma.open(config_dataset["dataset_filepath"], "wb") as f:
         pickle.dump(data_to_write, f)
-
     sys.stderr.write("Done\n")
