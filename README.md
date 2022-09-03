@@ -33,11 +33,12 @@ Encoded location vector
 The protein sequence is encoded as one-hot vector using 24 residue symbols (including non-standard, line B is Aspartic acid or Asparagine) plus '#' as the placeholder when sequence is shorter than threshold. 
 
 # Model
-Model is LSTM with 3 fully connected layers
+Model is LSTM (input size is 512, hidden size is 128) and 2 fully connected layers
 ![image](docs/seq2loc.png)
 
 This model was trained with 70 epochs, batch size=256. 
+
 ![image](docs/loss.png)
 
 # Results
-The balanced accuracy for this model is **0.73%** for prediction membrane localization and **0.76** for nuclear localization. 
+The balanced accuracy for this model is **73%** for prediction membrane localization and **76%** for nuclear localization. 
